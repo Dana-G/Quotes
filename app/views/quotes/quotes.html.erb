@@ -9,12 +9,15 @@
         <title>Quotes</title>
         <meta name="Quotes" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <%= stylesheet_link_tag "style.css" %>
+
 
         <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
     </head>
     <body>
+
+
+
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -26,34 +29,18 @@
             <div class="box one" >
                 <img src="" alt="placeholder+image">
                 <p id="quotes">
+                  <%= @quote.message %>
                 </p>
             </div>
             <div id="next"> Next &raquo; </div>
         </div>
 
+        <p>Total Quotes: <%= @total %> </p>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 
-        <script type="text/javascript">
 
-        $( document ).ready(function() {
-            var MyArrayNext = 0;
-            var myArray = new Array(3);
-            myArray[0] = "The weak can never forgive.Forgiveness is the attibute of the strong.";
-            myArray[1] = "Be kind whenever possible. It is always possible.";
-            myArray[2] = "Even if you fall on your face, you're still moving forward.";
-            $('#quotes').html(myArray[MyArrayNext]);
-
-            $('#next').click(function() {
-                MyArrayNext = MyArrayNext + 1;
-                if ( MyArrayNext == myArray.length){
-                    MyArrayNext = 0;
-                }
-                $('#quotes').html(myArray[MyArrayNext]);
-            });
-            $('.box').fadeIn(500);
-        });
 
         </script>
 

@@ -1,51 +1,159 @@
 // Place all the styles related to the quotes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body{
-  background-color: #9BD6E4;
-}
-.main {
-  width: 800px;
-  height:400px;
-  margin: 0 auto;
-}
-
-.box{
-  width:700px;
-  height: 275px;
-  background-color: white;
-  margin: 20px 30px;
-  white-space: normal;
-}
-
-#next{
-  clear:both;
-  background-color: white;
-  padding:20px;
-  margin: 0 auto;
-  width:60px;
+body {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  background-image: image-url('crossword.png');
+  background-repeat: repeat;
+
 }
 
-h1, p  {
-  font-family: 'Oleo Script', cursive;
+.main {
+  background-image: image-url('crossword.png');
+  background-repeat: repeat;
+  width: 60%;
+  margin: auto;
+  padding-top: 20px;
+  max-height: 90%;
+
+
+}
+
+#color {
+  height: 5px;
+  background-color: #16212E;
+  width: 100%;
+}
+
+div {
+  margin: auto;
+  }
+
+  .bubble {
+  position: relative;
+  margin-top: 60px;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  padding: 20px;
+  display: block;
+  background:  #18CDE8;
+  -webkit-border-radius: 22px;
+  -moz-border-radius: 22px;
+  border-radius: 22px;
+  border: #000000 dashed 2px;
+  box-shadow: -1px 9px 20px #3C3C46;
+  }
+
+  .bubble:after {
+  content: '';
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-width: 26px 13px 0px;
+  border-color: #18CDE8 transparent;
+  width: 0;
+  z-index: 1;
+  margin-left: -13px;
+  bottom: -25px;
+  left: 81%;
+  }
+
+  .bubble:before {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  display: block;
+  border-width: 31px 15px 0px;
+  border-color: #1A0000 rgba(172, 14, 14, 0);
+  width: 0;
+  z-index: -1;
+  margin-left: -15px;
+  bottom: -30px;
+  left: 81%;
+  }
+
+
+h1 {
+  font-family: 'Overlock', cursive;
+  color: #16212E;
+  font-size: 250%;
+  text-align: left;
+
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  color: #223A47;
+
+  font-size: 160%;
+  line-height: 160%;
+}
+
+h3 {
+  font-family: 'Special Elite', cursive;
   color: #405D67;
-  text-wrap: normal;
-  font-size: 32px;
-}
-
-.redtext{
-  color:red !important;
-}
-
-img {
-  margin: 10px;
-  display: inline;
-  float:left;
-  width:300px;
-  height:250px;
+  font-size: 150%;
+  margin-top: 41px;
 
 }
 
+
+#quotes {
+
+}
+
+#author {
+  float: right;
+  padding-top: 28px;
+  padding-bottom: 90px;
+}
+
+
+#button{
+  clear: both;
+  padding: 5px 0;
+  width:20%;
+  min-width: 100px;
+  text-align: center;
+  font-family: 'Poiret One', cursive;
+  color: #405D67;
+  font-size: 110%;
+ }
+
+ #next {
+   padding: 10px 0;
+ }
+
+ a {
+ color: #30464D;
+ text-decoration: none;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ border-radius: 3px;
+ }
+
+.bubble:hover {
+  position: relative;
+  text-decoration: none;
+
+  left: 2px;
+  bottom: 2px;
+
+  background: #00CAF3;
+  border: #000000 dashed 2px;
+  box-shadow: -2px 2px 6px #8F8F99;
+  -webkit-transition: box-shadow 0.3s;
+  -moz-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+
+}
+a:hover {
+ position: relative;
+ text-decoration: none;
+ color: red;
+ }
 
 

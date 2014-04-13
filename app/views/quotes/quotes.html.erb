@@ -10,35 +10,36 @@
         <meta name="Quotes" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-        <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Overlock' rel='stylesheet' type='text/css'>
 
     </head>
     <body>
-
-
-
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+
         <!-- Add your site or application content here -->
-
+        <header id="color"></header>
         <div class="main">
-            <h1>My Favorite Quotes</h1>
-            <div class="box one" >
-                <img src="" alt="placeholder+image">
-                <p id="quotes">
-                  <%= @quote.message %>
-                </p>
+            <h1>Quote Random</h1>
+            <div>
+                <a class="bubble" href="#"><h2 id="quotes">&quot;<%= @quote.message %>&quot;</h2></a>
             </div>
-            <div id="next"> Next &raquo; </div>
-        </div>
+            <div><h3 id="author"><a href="#">&#x2665;</a> <%= @quote.author %></h3>
 
-        <p>Total Quotes: <%= @total %> </p>
+            <!--div id="button"><p><a href="#">another, please...</a></p></div-->
+          </div>
+        </div>
+        <footer id="footie"></footer>
+
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+
 
 
 

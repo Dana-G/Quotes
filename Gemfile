@@ -37,6 +37,9 @@ end
 #Heroku integration - add the Rails plugin system
 gem 'rails_12factor', group: :production
 
+#current ruby version
+ruby "2.0.0"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

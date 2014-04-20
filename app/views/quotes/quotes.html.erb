@@ -26,11 +26,13 @@
         <!-- Add your site or application content here -->
         <header id="color"></header>
         <div class="main">
-            <h1>Quote Random</h1>
+
             <div>
+                <h1>Quote Random</h1>
                 <a class="bubble" href="#"><h2 id="quotes">&quot;<%= @quote.message %>&quot;</h2></a>
+                <div><h3 id="author"><a href="#">&#x2665;</a> <%= @quote.author %></h3>
             </div>
-            <div><h3 id="author"><a href="#">&#x2665;</a> <%= @quote.author %></h3>
+
 
             <!--div id="button"><p><a href="#">another, please...</a></p></div-->
           </div>

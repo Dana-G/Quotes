@@ -37,6 +37,11 @@ end
 #Heroku integration - add the Rails plugin system
 gem 'rails_12factor', group: :production
 
+#cache related
+#gem 'rack-cache'
+#gem 'dalli'
+#gem 'kgio'
+
 #current ruby version
 ruby "2.0.0"
 

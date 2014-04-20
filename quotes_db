@@ -1,0 +1,172 @@
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: quotes; Type: TABLE; Schema: public; Owner: DanaWorkFolder; Tablespace: 
+--
+
+CREATE TABLE quotes (
+    id integer NOT NULL,
+    message text,
+    author character varying(255),
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+ALTER TABLE public.quotes OWNER TO "DanaWorkFolder";
+
+--
+-- Name: quotes_id_seq; Type: SEQUENCE; Schema: public; Owner: DanaWorkFolder
+--
+
+CREATE SEQUENCE quotes_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.quotes_id_seq OWNER TO "DanaWorkFolder";
+
+--
+-- Name: quotes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: DanaWorkFolder
+--
+
+ALTER SEQUENCE quotes_id_seq OWNED BY quotes.id;
+
+
+--
+-- Name: schema_migrations; Type: TABLE; Schema: public; Owner: DanaWorkFolder; Tablespace: 
+--
+
+CREATE TABLE schema_migrations (
+    version character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.schema_migrations OWNER TO "DanaWorkFolder";
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: DanaWorkFolder
+--
+
+ALTER TABLE ONLY quotes ALTER COLUMN id SET DEFAULT nextval('quotes_id_seq'::regclass);
+
+
+--
+-- Data for Name: quotes; Type: TABLE DATA; Schema: public; Owner: DanaWorkFolder
+--
+
+COPY quotes (id, message, author, created_at, updated_at) FROM stdin;
+36	If you tell the truth, you don't have to remember anything	Mark Twain\n	2014-04-15 03:03:10.922421	2014-04-15 03:03:10.922421
+38	If you are depressed you are living in the past. If you are anxious you are living in the future. If you are at peace you are living in the present	Lao Tzu\n	2014-04-15 03:03:10.980678	2014-04-15 03:03:10.980678
+39	To be nobody but yourself in a world which is doing its best, night and day, to make you everybody else means to fight the hardest battle which any human being can fight; and never stop fighting	E. E. Cummings\n	2014-04-15 03:03:10.982413	2014-04-15 03:03:10.982413
+40	Only put off until tomorrow what you are willing to die having left undone	Pablo Picasso\n	2014-04-15 03:03:10.98431	2014-04-15 03:03:10.98431
+41	Be so good they can’t ignore you	Steve Martin\n	2014-04-15 03:03:10.986205	2014-04-15 03:03:10.986205
+42	Be yourself. Everyone else is taken	Oscar Wilde\n	2014-04-15 03:03:10.988354	2014-04-15 03:03:10.988354
+43	Have the courage to follow your heart and intuition. They somehow already know what you truly want to become. Everything else is secondary	Steve Jobs\n	2014-04-15 03:03:10.990176	2014-04-15 03:03:10.990176
+44	Be happy for this moment. This moment is your life	Omar Khayyan\n	2014-04-15 03:03:10.991753	2014-04-15 03:03:10.991753
+45	Life is a succession of lessons which must be lived to be understood	Ralph Waldo Emerson\n	2014-04-15 03:03:10.993436	2014-04-15 03:03:10.993436
+46	Everybody is a genius. But if you judge a fish by its ability to climb a tree, it will live its whole life believing that it is stupid	Albert Einstein\n	2014-04-15 03:03:10.99506	2014-04-15 03:03:10.99506
+47	Life is short, break the rules. Forgive quickly, kiss slowly. Love truly. Laugh uncontrollably and never regret anything that makes you smile	Mark Twain\n	2014-04-15 03:03:10.996725	2014-04-15 03:03:10.996725
+48	Our prime purpose in life is to help others. And if you can’t help them, at least don’t hurt them	Dalai Lama\n	2014-04-15 03:03:10.998307	2014-04-15 03:03:10.998307
+49	Don’t be content in your life just to do no wrong, be prepared every day to try and do some good	Sir Nicholas Winton\n	2014-04-15 03:03:10.999831	2014-04-15 03:03:10.999831
+50	We must be willing to get rid of the life we’ve planned, so as to have the life that is waiting for us	Joseph Campbell\n	2014-04-15 03:03:11.001451	2014-04-15 03:03:11.001451
+51	Isn’t it funny how day by day nothing changes, but when you look back everything is different	C.S. Lewis\n	2014-04-15 03:03:11.002974	2014-04-15 03:03:11.002974
+52	Be who you are and say what you feel because those who mind don't matter and those who matter don't mind	Dr. Seuss\n	2014-04-15 03:03:11.004512	2014-04-15 03:03:11.004512
+53	Two roads diverged in a wood, and I—I took the one less traveled by, And that has made all the difference	Robert Frost\n	2014-04-15 03:03:11.006067	2014-04-15 03:03:11.006067
+54	The most difficult thing is the decision to act, the rest is merely tenacity	Amelia Earhart\n	2014-04-15 03:03:11.007611	2014-04-15 03:03:11.007611
+55	Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do, so throw off the bowlines, sail away from safe harbor, catch the trade winds in your sails.  Explore, Dream, Discover	Mark Twain\n	2014-04-15 03:03:11.00923	2014-04-15 03:03:11.00923
+56	Whether you think you can or you think you can’t, you’re right	Henry Ford\n	2014-04-15 03:03:11.010835	2014-04-15 03:03:11.010835
+57	There is only one way to avoid criticism: do nothing, say nothing, and be nothing	Aristotle\n	2014-04-15 03:03:11.012571	2014-04-15 03:03:11.012571
+58	Few things can help an individual more than to place responsibility on him, and to let him know that you trust him	Booker T. Washington\n	2014-04-15 03:03:11.015789	2014-04-15 03:03:11.015789
+59	Everything has beauty, but not everyone can see	Confucius\n	2014-04-15 03:03:11.103451	2014-04-15 03:03:11.103451
+60	Change your thoughts and you change your world	Norman Vincent Peale\n	2014-04-15 03:03:11.115908	2014-04-15 03:03:11.115908
+61	...the only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars	Jack Kerouac\n	2014-04-15 03:03:11.117869	2014-04-15 03:03:11.117869
+62	All that is gold does not glitter, not all those who wander are lost	J.R.R Tolkien\n	2014-04-15 03:03:11.120114	2014-04-15 03:03:11.120114
+63	Ever tried. Ever failed. No matter. Try Again. Fail again. Fail better	Samuel Beckett\n	2014-04-15 03:03:11.121836	2014-04-15 03:03:11.121836
+64	Stop wearing your wishbone where your backbone ought to be	Elizabeth Gilbert\n	2014-04-15 03:03:11.123785	2014-04-15 03:03:11.123785
+65	The world needs dreamers and the world needs doers But above all the world needs dreamers who do	Sarah Breathnach\n	2014-04-15 03:03:11.125818	2014-04-15 03:03:11.125818
+66	The man who moves a mountain begins by carrying away small stones	Confucius\n	2014-04-15 03:03:11.132309	2014-04-15 03:03:11.132309
+67	Remarkable is a choice	Seth Godin\n	2014-04-15 03:03:11.133855	2014-04-15 03:03:11.133855
+68	If you do not change direction, you may end up where you are heading	Lao Tzu\n	2014-04-15 03:03:11.135786	2014-04-15 03:03:11.135786
+69	Time you enjoyed wasting is not wasted time	T.S. Elliot\n	2014-04-15 03:03:11.137862	2014-04-15 03:03:11.137862
+37	Leadership is the art of getting people to want to do what you know must be done\n	Eisenhower	2014-04-15 03:03:10.977944	2014-04-15 03:03:10.977944
+\.
+
+
+--
+-- Name: quotes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: DanaWorkFolder
+--
+
+SELECT pg_catalog.setval('quotes_id_seq', 69, true);
+
+
+--
+-- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: DanaWorkFolder
+--
+
+COPY schema_migrations (version) FROM stdin;
+20140407031239
+\.
+
+
+--
+-- Name: quotes_pkey; Type: CONSTRAINT; Schema: public; Owner: DanaWorkFolder; Tablespace: 
+--
+
+ALTER TABLE ONLY quotes
+    ADD CONSTRAINT quotes_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: unique_schema_migrations; Type: INDEX; Schema: public; Owner: DanaWorkFolder; Tablespace: 
+--
+
+CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (version);
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: DanaWorkFolder
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM "DanaWorkFolder";
+GRANT ALL ON SCHEMA public TO "DanaWorkFolder";
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+

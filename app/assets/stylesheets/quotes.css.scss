@@ -13,13 +13,10 @@ body {
 .main {
   background-image: image-url('crossword.png');
   background-repeat: repeat;
-  width: 60%;
-  margin: auto;
+  margin: 0 auto;
   padding-top: 20px;
   max-height: 90%;
-  max-width: 1000px;
-
-
+  max-width: 850px;
 
 }
 
@@ -27,14 +24,14 @@ body {
   height: 5px;
   background-color: #405D67;
   width: 100%;
+  margin: 0 auto;
 }
 
   .bubble {
   position: relative;
   margin-top: 60px;
-  width: 100%;
-  max-width: 800px;
-  padding: 20px;
+  max-width: 850px;
+  padding: 20px 0;
   display: block;
   background:  #18CDE8;
   -webkit-border-radius: 22px;
